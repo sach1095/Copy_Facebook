@@ -1,0 +1,162 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+td:not([align]), th:not([align]) {
+  text-align: left;
+}
+
+.aside_left-ol-ul, .header_nav-search {
+  border: white;
+  border-style: none;
+  border-radius: 2rem;
+}
+
+.aside_left-ol-ul, .aside_left, body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+/*----------------------------------------------------------------------------------------
+    Body 
+----------------------------------------------------------------------------------------*/
+body {
+  background-color: #e0e1e7;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-areas: "header header header" "aside_left section aside_right" "aside_left section aside_right";
+  font-family: 5rem;
+}
+
+/*----------------------------------------------------------------------------------------
+    header
+-----------------------------------------------------------------------------------------*/
+.header {
+  grid-area: header;
+  background-color: white;
+  width: 100%;
+  height: 3.7rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_nav-search {
+  background-color: #f0f1f5;
+  float: left;
+  align-items: center;
+  width: 14.7%;
+  margin-top: 1rem;
+}
+.header_nav-search input {
+  border-style: none;
+  background-color: #f0f1f5;
+  width: 10.8rem;
+  padding-top: 0.5rem;
+}
+.header_nav-search img {
+  margin-left: 0.5rem;
+}
+
+.header_nav-menu {
+  text-align: center;
+  margin-right: 17rem;
+}
+.header_nav-menu img {
+  margin: 0.4rem 2rem;
+}
+
+.header_nav-menu-icon {
+  display: inline-block;
+  align: top;
+  margin-top: 0.7rem;
+  width: 7rem;
+  border-radius: 0.5rem;
+}
+.header_nav-menu-icon:hover {
+  background-color: #f2f2f2;
+}
+
+/*----------------------------------------------------------------------------------------
+    aside left
+-----------------------------------------------------------------------------------------*/
+.aside_left {
+  grid-area: aside_left;
+}
+
+.aside_left-ol-ul {
+  margin: 1rem;
+}
+.aside_left-ol-ul:hover {
+  background-color: #d2d3dc;
+}
+
+.aside_left-hr {
+  border-style: groove;
+  margin: 1rem;
+}
+
+.aside_left-h3 {
+  margin: 1rem;
+}
+.aside_left-h3 img {
+  vertical-align: middle;
+  border-radius: 5rem;
+}
+
+/*----------------------------------------------------------------------------------------
+    aside right
+-----------------------------------------------------------------------------------------*/
+.aside_right {
+  grid-area: aside_right;
+  width: 100%;
+}
+
+/*----------------------------------------------------------------------------------------
+    section
+-----------------------------------------------------------------------------------------*/
+.section {
+  grid-area: section;
+}
+
+/*# sourceMappingURL=style.css.map */
