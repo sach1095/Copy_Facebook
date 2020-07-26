@@ -50,14 +50,15 @@ img{
     @extend %border;
     background-color: $second;
     float: left;
-    align-items: center;
-    width: 14.7%;
+    align-items: center;  
+    width: 20%;
     margin-top: 1rem;
     input{
         border-style: none;
         background-color: $second;
-        width: 10.8rem;
-        padding-top: 0.5rem;        
+        width: 15rem;
+        padding: 0.7rem;
+        font-size: 1rem;  
     }
 
     img{
@@ -67,8 +68,7 @@ img{
 
 .header_nav-menu{
     text-align: center;
-    margin-right: 17rem;
-    
+    margin-right: 22rem;  
     img{
         margin: 0.4rem 2rem;
        }
@@ -78,9 +78,10 @@ img{
 .header_nav-menu-icon{
     display : inline-block;
     align : top;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     width: 7rem;
     border-radius: 0.5rem;
+    padding: 0.3rem;
    &:hover{
        background-color: darken($color: white, $amount: 5);
    }
