@@ -47,6 +47,7 @@ td:not([align]), th:not([align]) {
   text-align: left;
 }
 
+/* ordi et tablette au dessus de 760px et smartphone entre 480 et 360px*/
 .aside_left-ol-ul, .header_nav-search {
   border: white;
   border-style: none;
@@ -68,11 +69,6 @@ body {
   grid-template-areas: "header header header" "aside_left section aside_right" "aside_left section aside_right";
 }
 
-img {
-  vertical-align: middle;
-  border-radius: 5rem;
-}
-
 /*----------------------------------------------------------------------------------------
     header
 -----------------------------------------------------------------------------------------*/
@@ -83,6 +79,10 @@ img {
   height: 3.7rem;
   align-items: center;
   justify-content: center;
+}
+.header img {
+  vertical-align: middle;
+  border-radius: 5rem;
 }
 
 .header_nav-search {
@@ -101,6 +101,8 @@ img {
 }
 .header_nav-search img {
   margin-left: 0.5rem;
+  vertical-align: middle;
+  border-radius: 5rem;
 }
 
 .header_nav-menu {
@@ -153,10 +155,73 @@ img {
 }
 
 /*----------------------------------------------------------------------------------------
+    section
+-----------------------------------------------------------------------------------------*/
+.section {
+  display: grid;
+  grid-template-areas: "story" "watsup" "salons" "actuality";
+}
+
+.story {
+  grid-area: story;
+  max-width: 650px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "story_blok0 story_blok1 story_blok2 story_blok3 story_blok4";
+}
+.story img {
+  border-radius: 2rem;
+  margin-left: 20%;
+}
+
+.story_blok4, .story_blok3, .story_blok2, .story_blok1, .story_blok0 {
+  margin-top: 10%;
+}
+
+.story_blok0 {
+  grid-area: story_blok0;
+}
+
+.story_blok1 {
+  grid-area: story_blok1;
+}
+
+.story_blok2 {
+  grid-area: story_blok2;
+}
+
+.story_blok3 {
+  grid-area: story_blok3;
+}
+
+.story_blok4 {
+  grid-area: story_blok4;
+}
+
+.watsup {
+  grid-area: watsup;
+  background-color: 0;
+}
+
+.salons {
+  grid-area: salons;
+  background-color: 0;
+}
+
+.actuality {
+  grid-area: actuality;
+  background-color: 0;
+}
+
+/*----------------------------------------------------------------------------------------
     aside left
 -----------------------------------------------------------------------------------------*/
 .aside_left {
   grid-area: aside_left;
+}
+.aside_left img {
+  vertical-align: middle;
+  border-radius: 5rem;
 }
 
 .aside_left-ol-ul {

@@ -1,7 +1,7 @@
 @import "../libs/reset.scss";
 @import "../libs/variable.scss";
 
-
+/* ordi et tablette au dessus de 760px et smartphone entre 480 et 360px*/
 
 %border{
     border: rgb(255, 255, 255);
@@ -29,10 +29,7 @@ body{
     
 }
 
-img{
-        vertical-align: middle;
-        border-radius: 5rem;
-    }
+
 /*----------------------------------------------------------------------------------------
     header
 -----------------------------------------------------------------------------------------*/
@@ -44,6 +41,10 @@ img{
     height: 3.7rem;
     align-items:center;
     justify-content: center;
+    img{
+        vertical-align: middle;
+        border-radius: 5rem;
+    }
 }
 
 .header_nav-search{
@@ -63,6 +64,9 @@ img{
 
     img{
         margin-left: 0.5rem;
+        vertical-align: middle;
+        border-radius: 5rem;
+        
     }
 }
 
@@ -113,13 +117,81 @@ img{
         background-color: darken($color: $second, $amount: 5);
     }
 }
+
+/*----------------------------------------------------------------------------------------
+    section
+-----------------------------------------------------------------------------------------*/
+
+.section{
+    display: grid;
+    grid-template-areas:"story"
+                        "watsup"
+                        "salons"
+                        "actuality";
+
+}
+
+.story{
+    grid-area: story;
+    max-width: 650px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:"story_blok0 story_blok1 story_blok2 story_blok3 story_blok4";
+    img{
+        border-radius: 2rem;
+        margin-left: 20%;
+    }
+}
+
+%block{
+    margin-top: 10%;
+}
+
+.story_blok0{
+    grid-area: story_blok0;
+    @extend %block;
+}
+.story_blok1{
+    grid-area: story_blok1;
+    @extend %block;
+}
+.story_blok2{
+    grid-area: story_blok2;
+    @extend %block;
+}
+.story_blok3{
+    grid-area: story_blok3;
+    @extend %block;
+}
+.story_blok4{
+    grid-area: story_blok4;
+    @extend %block;
+}
+
+.watsup{
+    grid-area: watsup;
+    background-color: red($color: #000000);
+}
+
+.salons{
+    grid-area: salons;
+    background-color: green($color: #000000);
+}
+
+.actuality{
+    grid-area: actuality;
+    background-color: blue($color: #000000);
+}
 /*----------------------------------------------------------------------------------------
     aside left
 -----------------------------------------------------------------------------------------*/
 .aside_left{
     @extend %police;
     grid-area: aside_left;
-
+    img{
+    vertical-align: middle;
+    border-radius: 5rem;
+    }
 }
 
 .aside_left-ol-ul{
