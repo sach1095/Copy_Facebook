@@ -1,6 +1,8 @@
 @import "../libs/reset.scss";
 @import "../libs/variable.scss";
 
+$primary: rgb(235, 236, 240);
+$second: rgb(240, 241, 245);
 /* ordi et tablette au dessus de 760px et smartphone entre 480 et 360px*/
 
 %border{
@@ -11,7 +13,7 @@
 
 %police{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+    font-size: medium;
 }
 
 /*----------------------------------------------------------------------------------------
@@ -133,18 +135,18 @@ body{
 
 .story{
     grid-area: story;
-    max-width: 650px;
-    width: 100%;
+    width: 85%;
     display: grid;
     grid-template-areas:"story_blok0 story_blok1 story_blok2 story_blok3 story_blok4";
     img{
-        border-radius: 2rem;
+        border-radius: 1rem;
         margin-left: 20%;
+       
     }
 }
 
 %block{
-    margin-top: 10%;
+    margin-top: 18%;
 }
 
 .story_blok0{
@@ -204,13 +206,13 @@ body{
 }
 
 .aside_left-hr{
-    border-style: groove;
-    margin: 1rem;
+    border-style: outset;
+    margin: 0.5rem 1rem;
 }
 
 .aside_left-h3{
     margin: 1rem;
-    
+    font-size: 1.1rem;
 }
 
 
@@ -224,6 +226,36 @@ body{
 
 }
 
+.aside_right-pub{
+    width: 13.5rem;
+    margin: 1rem;
+    img{
+        float:left;
+        vertical-align: middle;
+    }
+     
+}
+
+.aside_right-p-span{
+    color: gray
+}
+.aside_right-hr{
+    @extend .aside_left-hr;
+    margin: 1rem;
+}
+.aside_right-h3{
+    @extend .aside_left-h3;
+    display: inline;
+    margin: 1rem;
+}
+.aside_right-iconB{
+margin-left: 13rem;
+display: inline;
+}
+.aside_right-icon{
+    width: 1.1rem;
+    
+}
 
 /*----------------------------------------------------------------------------------------
     section
