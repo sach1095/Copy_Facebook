@@ -16,6 +16,10 @@ $second: rgb(240, 241, 245);
     font-size: medium;
 }
 
+%shadow{
+    box-shadow: 2px 1px 2px rgb(156, 155, 155);
+}
+
 /*----------------------------------------------------------------------------------------
     Body 
 ----------------------------------------------------------------------------------------*/
@@ -61,7 +65,7 @@ body{
         background-color: $second;
         width: 15rem;
         padding: 0.7rem;
-        font-size: 1rem;  
+        font-size: 1rem;
     }
 
     img{
@@ -95,7 +99,7 @@ body{
 
 .header_right{
     text-align: right;
-    margin-top: -2.3rem;
+    margin-top: -2.6rem;
    margin-right: 1.5rem;
 }
 .header_nav-right, .header_nav-right-profil{
@@ -125,22 +129,24 @@ body{
 -----------------------------------------------------------------------------------------*/
 
 .section{
+    grid-area: section;
     display: grid;
     grid-template-areas:"story"
                         "watsup"
                         "salons"
-                        "actuality";
+                        "post";
 
 }
 
 .story{
     grid-area: story;
     width: 85%;
+    height: 25%;
     display: grid;
     grid-template-areas:"story_blok0 story_blok1 story_blok2 story_blok3 story_blok4";
     img{
         border-radius: 1rem;
-        margin-left: 20%;
+        margin-left: 4rem;
        
     }
 }
@@ -170,20 +176,171 @@ body{
     @extend %block;
 }
 
-.watsup{
+/*---------------------------------------------------*/
+
+.section_watsup{
     grid-area: watsup;
-    background-color: red($color: #000000);
+    background-color: white;
+    margin-left: 7rem;
+    width: 33rem;
+    height: 108%;
+    border-radius: 0.5rem;
+    @extend %shadow;
+}
+.section_watsup_search{
+margin: 0.5rem 0.5rem;
+    img{
+        border-radius: 5rem;
+        vertical-align: bottom;
+    }
+    input{
+        vertical-align: super;
+        border-style: none;
+        border-radius: 1.5rem;
+        background-color: $second;
+        width: 90%;
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+   
+}
+.section_wastup_hr{
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+    width: 95%;
+    margin-left: 0.8em;
+    border-style: outset;
+}
+.section_wastup_block{
+    display: inline;
+    vertical-align: middle;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+   margin-left: 1rem;
+    img{
+        vertical-align: middle;
+    }
+
+    
+    &:hover {
+        background-color: darken($color: $second, $amount: 5);
+    }
 }
 
-.salons{
+/*---------------------------------------------------*/
+
+.section_salons{
     grid-area: salons;
-    background-color: green($color: #000000);
+    background-color: white;
+    margin-left: 7rem;
+    margin-top: 1rem;
+    width: 33rem;
+    border-radius: 0.5rem;
+    height: 5rem;
+    @extend %shadow;
 }
 
-.actuality{
-    grid-area: actuality;
-    background-color: blue($color: #000000);
+.section_salons-top{
+    margin: 0.3rem;
+    display: line;
+    p{
+        display: inline;
+    }
+
+    img{
+        float: left;
+        vertical-align: super;
+        margin-right: 0.2rem;
+    }
+    a{
+        color: blue;
+        margin-left: 23.5rem;
+        text-decoration: none;
+    }
 }
+
+.section_salons-bottom{
+    margin-left: 1rem;
+    img{
+        margin: 0.2rem;
+    }
+}
+/*---------------------------------------------------*/
+
+.section_post{
+    grid-area: post;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 7rem;
+    width: 33rem;    
+    background-color: white;
+    height: 53.5rem;
+    @extend %shadow;
+}
+
+.section_post-blok0{
+    display: line;
+}
+
+.section_post-block-P-img{
+        vertical-align: text-bottom; 
+        float: left;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+}
+.section_post-block-top{
+    margin: 1rem 0.5rem;
+    img{
+        border-radius: 5rem;
+    }
+    p{
+        vertical-align: text-top;
+    }
+}
+
+.section_post-block-middle{
+    display: inline-flex;
+    margin-top: 0.5rem;
+    a{
+        color: gray;
+        margin-top: 0.5rem;
+        margin-left: 21rem;
+    }
+}
+
+.section_post-block-top-icon{
+    margin-left: 10rem;
+}
+.section_post-block-middle-btn{
+    display: inline;
+    margin-left: 4rem;
+    border-style: none;
+    padding: 0.5rem 2rem;
+    img{
+        margin-bottom: -0.4rem;
+    }
+    &:hover{
+        background-color: darken($color: $second, $amount: 5);
+    }
+}
+.section_post-block-hr{
+    margin: 0.7rem;
+}
+.section_post-block-bottom-com{
+    display: line;
+    background-color: $primary;
+    margin-left: 3.1rem;
+    border-radius: 1.5rem;
+    padding: 0.7rem;
+    img{
+        float: right;
+    }
+    input{
+        background-color: $primary;
+        border-style: none;
+    }
+}
+
 /*----------------------------------------------------------------------------------------
     aside left
 -----------------------------------------------------------------------------------------*/
@@ -223,7 +380,6 @@ body{
 .aside_right{
     grid-area: aside_right;
     width: 100%;
-
 }
 
 .aside_right-pub{
@@ -237,7 +393,7 @@ body{
 }
 
 .aside_right-p-span{
-    color: gray
+    color: gray;
 }
 .aside_right-hr{
     @extend .aside_left-hr;
@@ -254,13 +410,21 @@ display: inline;
 }
 .aside_right-icon{
     width: 1.1rem;
-    
 }
 
-/*----------------------------------------------------------------------------------------
-    section
------------------------------------------------------------------------------------------*/
-.section{
-    grid-area: section;
+.aside_right-ul{
+    p{
+        @extend .aside_left-ol-ul;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+    img{
+        width: 2.2rem;
+        border-radius: 5rem;    
 
+    }
+}
+.aside_right-ul-contact-name{
+    text-align: center;
+    vertical-align: super;
 }
