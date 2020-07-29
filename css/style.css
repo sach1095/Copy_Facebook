@@ -47,7 +47,6 @@ td:not([align]), th:not([align]) {
   text-align: left;
 }
 
-/* ordi et tablette au dessus de 760px et smartphone entre 480 et 360px*/
 .aside_left-ol-ul, .aside_right-ul p, .header_nav-search {
   border: white;
   border-style: none;
