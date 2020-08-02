@@ -1,5 +1,7 @@
 @import "../libs/reset.scss";
 
+
+/* 1330 ca casse */ 
 $primary: rgb(235, 236, 240);
 $second: rgb(240, 241, 245);
 
@@ -43,77 +45,79 @@ body{
     background-color: white;
     width: 100%;
     height: 3.7rem;
-    align-items:center;
-    justify-content: center;
+    justify-content: space-between;
     img{
         vertical-align: middle;
         border-radius: 5rem;
     }
 }
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 
-.header_nav-search{
-    @extend %border;
+.header_left{
+    display: flex;
+    justify-content: flex-start;
+    width: 25%;
+}
+
+
+.header_left-search{
     background-color: $second;
-    float: left;
-    align-items: center;  
-    width: 20%;
-    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    margin-top: 0.6rem;
+    border-radius: 90px;
     input{
         border-style: none;
         background-color: $second;
         width: 15rem;
-        padding: 0.7rem;
         font-size: 1rem;
     }
 
     img{
-        margin-left: 0.5rem;
+        margin-left: 0.7rem;
         vertical-align: middle;
         border-radius: 5rem;
-        
     }
 }
 
-.header_nav-menu{
-    text-align: center;
-    margin-right: 22rem;  
+.header_middle{
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
     img{
         margin: 0.4rem 2rem;
        }
     
 }
 
-.header_nav-menu-icon{
-    display : inline-block;
-    align : top;
+.header_middle-icon{
+    display : flex;
     margin-top: 0.5rem;
-    width: 7rem;
     border-radius: 0.5rem;
-    padding: 0.3rem;
+    img{
+        width: 30%;
+        height: 70%;
+    }
    &:hover{
        background-color: darken($color: white, $amount: 5);
    }
 }
 
 .header_right{
-    text-align: right;
-    margin-top: -2.6rem;
-   margin-right: 1.5rem;
+    display: flex;
+    width: 20%;
+    height: 42px;
+    margin-top: 0.5rem;
 }
-.header_nav-right, .header_nav-right-profil{
-    display : inline-block;
-    align : top; 
-    margin-right: 0.3rem;
-    
-}
-.header_nav-right-profil{
-    border-radius: 2rem;
-    padding: 0.25rem;
-    &:hover {
-        background-color: darken($color: white, $amount: 5);
-    }
-}
-.header_nav-right{
+
+
+.header_right-icon{
     padding: 0.5rem;
     border-radius: 5rem;    
     background-color: $second;
@@ -128,99 +132,60 @@ body{
 
 .section{
     grid-area: section;
-    display: grid;
-    grid-template-areas:"story"
-                        "watsup"
-                        "salons"
-                        "post";
-
+    display: box;
 }
 
 .story{
     grid-area: story;
-    width: 85%;
-    height: 25%;
-    display: grid;
-    grid-template-areas:"story_blok0 story_blok1 story_blok2 story_blok3 story_blok4";
+    width: 86%;
+    display: flex;
+    margin-top: 1rem;
     img{
         border-radius: 1rem;
         margin-left: 4rem;
-       
     }
-}
-
-%block{
-    margin-top: 18%;
-}
-
-.story_blok0{
-    grid-area: story_blok0;
-    @extend %block;
-}
-.story_blok1{
-    grid-area: story_blok1;
-    @extend %block;
-}
-.story_blok2{
-    grid-area: story_blok2;
-    @extend %block;
-}
-.story_blok3{
-    grid-area: story_blok3;
-    @extend %block;
-}
-.story_blok4{
-    grid-area: story_blok4;
-    @extend %block;
 }
 
 /*---------------------------------------------------*/
 
 .section_watsup{
     grid-area: watsup;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     background-color: white;
-    margin-left: 7rem;
-    width: 33rem;
-    height: 108%;
+    margin-left: 6.5rem;
+    width: 75%;
+    height: 100px;
     border-radius: 0.5rem;
     @extend %shadow;
 }
 .section_watsup_search{
 margin: 0.5rem 0.5rem;
+margin-top: 1rem;
     img{
         border-radius: 5rem;
-        vertical-align: bottom;
+        vertical-align: middle;
     }
     input{
-        vertical-align: super;
+        vertical-align: middle;
         border-style: none;
         border-radius: 1.5rem;
         background-color: $second;
-        width: 90%;
-        padding: 0.7rem;
+        width: 85%;
+        height: 35px;
         font-size: 1rem;
     }
    
 }
 .section_wastup_hr{
-    margin-top: 0.2rem;
-    margin-bottom: 0.8rem;
-    width: 95%;
-    margin-left: 0.8em;
+    vertical-align: middle;   
+    width: 93%;
     border-style: outset;
 }
 .section_wastup_block{
-    display: inline;
-    vertical-align: middle;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-   margin-left: 1rem;
-    img{
-        vertical-align: middle;
-    }
-
-    
+    margin-top: 0.5rem;
+   img{
+       vertical-align: middle;
+   }
     &:hover {
         background-color: darken($color: $second, $amount: 5);
     }
@@ -231,20 +196,12 @@ margin: 0.5rem 0.5rem;
 .section_salons{
     grid-area: salons;
     background-color: white;
-    margin-left: 7rem;
-    margin-top: 1.8rem;
-    width: 33rem;
+    margin-left: 6.5rem;
+    margin-top: 0.8rem;
+    width: 75%;
     border-radius: 0.5rem;
-    height: 5rem;
+    height: 75px;
     @extend %shadow;
-}
-
-.section_salons-top{
-    margin: 0.3rem;
-    display: line;
-    p{
-        display: inline;
-    }
 
     img{
         float: left;
@@ -252,14 +209,14 @@ margin: 0.5rem 0.5rem;
         margin-right: 0.2rem;
     }
     a{
+        margin-right: 0.7rem;
         color: blue;
-        margin-left: 23.5rem;
         text-decoration: none;
     }
 }
 
 .section_salons-bottom{
-    margin-left: 1rem;
+    display: flex; 
     img{
         margin: 0.2rem;
     }
@@ -270,75 +227,60 @@ margin: 0.5rem 0.5rem;
     grid-area: post;
     border-radius: 0.5rem;
     margin-top: 1rem;
-    margin-left: 7rem;
-    width: 33rem;    
+    margin-left: 6.5rem;
+    width: 75%;    
     background-color: white;
-    height: 53.5rem;
+    height: 815px;
     @extend %shadow;
-}
-
-.section_post-blok0{
-    display: line;
-}
-
-.section_post-block-P-img{
-        vertical-align: text-bottom; 
-        float: left;
-        margin-left: 1rem;
-        margin-top: 0.5rem;
-}
-.section_post-block-top{
-    margin: 1rem 0.5rem;
-    img{
-        border-radius: 5rem;
-    }
-    p{
-        vertical-align: text-top;
-    }
-}
-
-.section_post-block-middle{
-    display: inline-flex;
-    margin-top: 0.5rem;
     a{
+        margin-right: 0.7rem;
         color: gray;
-        margin-top: 0.5rem;
-        margin-left: 21rem;
+        text-decoration: none;
+    }
+    hr{
+        width: 93%;
+        margin-left: 1.5rem;
+        border-style: outset;
     }
 }
 
-.section_post-block-top-icon{
-    margin-left: 10rem;
-}
-.section_post-block-middle-btn{
-    display: inline;
-    margin-left: 4rem;
-    border-style: none;
-    padding: 0.5rem 2rem;
+
+.post_container{
+    width: 100%;
+    font-size: 1rem;
+    justify-content: space-between;
     img{
-        margin-bottom: -0.4rem;
+        width: 1rem;
     }
+}
+.post_btn{
+    padding: 0.2rem;
+    img{
+        width: 1.4rem;
+        vertical-align: middle;
+    }
+
     &:hover{
         background-color: darken($color: $second, $amount: 5);
     }
 }
-.section_post-block-hr{
-    margin: 0.7rem;
-}
-.section_post-block-bottom-com{
+
+.post_bottom{
     display: line;
     background-color: $primary;
-    margin-left: 3.1rem;
+    margin-left: 3rem;
     border-radius: 1.5rem;
-    padding: 0.7rem;
+    padding: 0.5rem;
     img{
         float: right;
     }
     input{
         background-color: $primary;
         border-style: none;
+        padding: 0.3rem;
     }
 }
+
 
 /*----------------------------------------------------------------------------------------
     aside left
@@ -346,20 +288,20 @@ margin: 0.5rem 0.5rem;
 .aside_left{
     @extend %police;
     grid-area: aside_left;
+    width: 100%;
     img{
     vertical-align: middle;
     border-radius: 5rem;
     }
-}
-
-.aside_left-ol-ul{
+    ul{
     @extend %border;
-    @extend %police;
     margin: 1rem;
     &:hover{
         background-color: darken($color: $primary, $amount: 5);
+     }
     }
 }
+
 
 .aside_left-hr{
     border-style: outset;
@@ -398,32 +340,24 @@ margin: 0.5rem 0.5rem;
     @extend .aside_left-hr;
     margin: 1rem;
 }
-.aside_right-h3{
-    @extend .aside_left-h3;
-    display: inline;
-    margin: 1rem;
-}
-.aside_right-iconB{
-margin-left: 13rem;
-display: inline;
-}
-.aside_right-icon{
-    width: 1.1rem;
-}
+
+
 
 .aside_right-ul{
     p{
-        @extend .aside_left-ol-ul;
         margin-top: 0.2rem;
         margin-bottom: 0.2rem;
+        @extend %border;
+    margin: 1rem;
+    &:hover{
+        background-color: darken($color: $primary, $amount: 5);
+     }
     }
     img{
+        vertical-align: middle;
         width: 2.2rem;
         border-radius: 5rem;    
 
     }
 }
-.aside_right-ul-contact-name{
-    text-align: center;
-    vertical-align: super;
-}
+
