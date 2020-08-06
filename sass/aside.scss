@@ -1,0 +1,80 @@
+@import "../libs/lib.scss";
+    /*----------------------------------------------------------------------------------------
+        aside left
+    -----------------------------------------------------------------------------------------*/
+    .aside_left{
+        @extend %police;
+        grid-area: aside_left;
+        width: 100%;
+        img{
+        vertical-align: middle;
+        border-radius: 5rem;
+        }
+        ul{
+        @extend %border;
+        margin: 1rem;
+        &:hover{
+            background-color: darken($color: $primary, $amount: 5);
+        }
+        }
+    }
+
+
+    .aside_left-hr{
+        border-style: outset;
+        margin: 0.5rem 1rem;
+    }
+
+    .aside_left-h3{
+        margin: 1rem;
+        font-size: 1.1rem;
+    }
+
+
+    /*----------------------------------------------------------------------------------------
+        aside right
+    -----------------------------------------------------------------------------------------*/
+
+    .aside_right{
+        grid-area: aside_right;
+        width: 100%;
+    }
+
+    .aside_right-pub{
+        width: 13.5rem;
+        margin: 1rem;
+        img{
+            float:left;
+            vertical-align: middle;
+        }
+        
+    }
+
+    .aside_right-p-span{
+        color: gray;
+    }
+    .aside_right-hr{
+        @extend .aside_left-hr;
+        margin: 1rem;
+    }
+
+
+
+    .aside_right-ul{
+        p{
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            @extend %border;
+        margin: 1rem;
+        &:hover{
+            background-color: darken($color: $primary, $amount: 5);
+        }
+        }
+        img{
+            vertical-align: middle;
+            width: 2.2rem;
+            border-radius: 5rem;    
+
+        }
+    }
+

@@ -1,0 +1,154 @@
+.section_post, .section_salons, .section_watsup {
+  box-shadow: 2px 1px 2px #9c9b9b;
+}
+
+/*----------------------------------------------------------------------------------------
+   section
+-----------------------------------------------------------------------------------------*/
+.section {
+  grid-area: section;
+  display: box;
+}
+
+.story {
+  grid-area: story;
+  width: 86%;
+  display: flex;
+  margin-top: 1rem;
+}
+.story img {
+  border-radius: 1rem;
+  margin-left: 4rem;
+}
+
+/*---------------------------------------------------*/
+.section_watsup {
+  grid-area: watsup;
+  margin-top: 0.8rem;
+  background-color: white;
+  margin-left: 6.5rem;
+  width: 75%;
+  height: 100px;
+  border-radius: 0.5rem;
+}
+
+.section_watsup_search {
+  margin: 0.5rem 0.5rem;
+  margin-top: 1rem;
+}
+.section_watsup_search img {
+  border-radius: 5rem;
+  vertical-align: middle;
+}
+.section_watsup_search input {
+  vertical-align: middle;
+  border-style: none;
+  border-radius: 1.5rem;
+  background-color: #f0f1f5;
+  width: 85%;
+  height: 35px;
+  font-size: 1rem;
+}
+
+.section_wastup_hr {
+  vertical-align: middle;
+  width: 93%;
+  border-style: outset;
+}
+
+.section_wastup_block {
+  margin-top: 0.5rem;
+}
+.section_wastup_block img {
+  vertical-align: middle;
+}
+.section_wastup_block:hover {
+  background-color: #e1e3eb;
+}
+
+/*---------------------------------------------------*/
+.section_salons {
+  grid-area: salons;
+  background-color: white;
+  margin-left: 6.5rem;
+  margin-top: 0.8rem;
+  width: 75%;
+  border-radius: 0.5rem;
+  height: 75px;
+}
+.section_salons img {
+  float: left;
+  vertical-align: super;
+  margin-right: 0.2rem;
+}
+.section_salons a {
+  margin-right: 0.7rem;
+  color: blue;
+  text-decoration: none;
+}
+
+.section_salons-bottom {
+  display: flex;
+}
+.section_salons-bottom img {
+  margin: 0.2rem;
+}
+
+/*---------------------------------------------------*/
+.section_post {
+  grid-area: post;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-left: 6.5rem;
+  width: 75%;
+  background-color: white;
+  height: 100%;
+}
+.section_post a {
+  margin-right: 0.7rem;
+  color: gray;
+  text-decoration: none;
+}
+.section_post hr {
+  width: 93%;
+  margin-left: 1.5rem;
+  border-style: outset;
+}
+
+.post_container {
+  width: 100%;
+  font-size: 1rem;
+  justify-content: space-between;
+}
+.post_container img {
+  width: 1rem;
+}
+
+.post_btn {
+  padding: 0.2rem;
+}
+.post_btn img {
+  width: 1.4rem;
+  vertical-align: middle;
+}
+.post_btn:hover {
+  background-color: #e1e3eb;
+}
+
+.post_bottom {
+  display: line;
+  background-color: #ebecf0;
+  margin-left: 3rem;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+}
+.post_bottom img {
+  float: right;
+}
+.post_bottom input {
+  background-color: #ebecf0;
+  border-style: none;
+  padding: 0.3rem;
+}
+
+/*# sourceMappingURL=section.css.map */

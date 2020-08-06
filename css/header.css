@@ -1,0 +1,87 @@
+/*----------------------------------------------------------------------------------------
+    header
+-----------------------------------------------------------------------------------------*/
+.header {
+  grid-area: header;
+  background-color: white;
+  width: 100%;
+  height: 3.7rem;
+  justify-content: space-between;
+}
+.header img {
+  vertical-align: middle;
+  border-radius: 5rem;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header_left {
+  display: flex;
+  justify-content: flex-start;
+  width: 25%;
+}
+
+.header_left-search {
+  background-color: #f0f1f5;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 40px;
+  margin-top: 0.6rem;
+  border-radius: 90px;
+}
+.header_left-search input {
+  border-style: none;
+  background-color: #f0f1f5;
+  width: 15rem;
+  font-size: 1rem;
+}
+.header_left-search img {
+  margin-left: 0.7rem;
+  vertical-align: middle;
+  border-radius: 5rem;
+}
+
+.header_middle {
+  display: flex;
+  justify-content: space-evenly;
+  width: 35%;
+}
+.header_middle img {
+  margin: 0.4rem 2rem;
+}
+
+.header_middle-icon {
+  display: flex;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+}
+.header_middle-icon img {
+  width: 30%;
+  height: 70%;
+}
+.header_middle-icon:hover {
+  background-color: #f2f2f2;
+}
+
+.header_right {
+  display: flex;
+  width: 20%;
+  height: 42px;
+  margin-top: 0.5rem;
+}
+
+.header_right-icon {
+  padding: 0.5rem;
+  border-radius: 5rem;
+  background-color: #f0f1f5;
+}
+.header_right-icon:hover {
+  background-color: #e1e3eb;
+}
+
+/*# sourceMappingURL=header.css.map */
