@@ -108,7 +108,7 @@ td:not([align]), th:not([align]) {
 
 .m_stories {
   grid-area: stories;
-  height: 525px;
+  height: 460px;
   margin-top: 25px;
   background-color: white;
 }
@@ -123,7 +123,7 @@ td:not([align]), th:not([align]) {
 .m_post {
   grid-area: post;
   margin-top: 25px;
-  height: 1430px;
+  height: 100%;
   background-color: white;
 }
 
@@ -146,7 +146,6 @@ td:not([align]), th:not([align]) {
 .m_post-top-icon2 {
   transform: rotate(-90deg);
   width: 3rem;
-  height: 5rem;
   margin: 2rem;
 }
 
@@ -163,6 +162,9 @@ td:not([align]), th:not([align]) {
 .m_post-bot-span {
   position: absolute;
   left: 2rem;
+}
+.m_post-bot-span img {
+  vertical-align: middle;
 }
 
 .m_post-bot-a {
@@ -189,9 +191,6 @@ td:not([align]), th:not([align]) {
   width: 100%;
   font-size: 3rem;
   justify-content: space-between;
-}
-.m_post_container img {
-  width: 3rem;
 }
 
 /*# sourceMappingURL=m.style.css.map */

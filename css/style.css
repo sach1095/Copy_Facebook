@@ -72,6 +72,21 @@ td:not([align]), th:not([align]) {
   grid-template-areas: "header header header" "aside_left section aside_right" "aside_left section aside_right";
 }
 
+.aside_right-ul p, .aside_left ul {
+  border: white;
+  border-style: none;
+  border-radius: 2rem;
+}
+
+.aside_left, .body_deskop {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+.section_post, .section_salons, .section_watsup {
+  box-shadow: 2px 1px 2px #9c9b9b;
+}
+
 /*----------------------------------------------------------------------------------------
     header
 -----------------------------------------------------------------------------------------*/
@@ -158,8 +173,105 @@ td:not([align]), th:not([align]) {
   background-color: #e1e3eb;
 }
 
+.aside_right-ul p, .aside_left ul {
+  border: white;
+  border-style: none;
+  border-radius: 2rem;
+}
+
+.aside_left, .body_deskop {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+.section_post, .section_salons, .section_watsup {
+  box-shadow: 2px 1px 2px #9c9b9b;
+}
+
 /*----------------------------------------------------------------------------------------
-    section
+    aside left
+-----------------------------------------------------------------------------------------*/
+.aside_left {
+  grid-area: aside_left;
+  width: 100%;
+}
+.aside_left img {
+  vertical-align: middle;
+  border-radius: 5rem;
+}
+.aside_left ul {
+  margin: 1rem;
+}
+.aside_left ul:hover {
+  background-color: #dcdee5;
+}
+
+.aside_left-hr, .aside_right-hr {
+  border-style: outset;
+  margin: 0.5rem 1rem;
+}
+
+.aside_left-h3 {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+/*----------------------------------------------------------------------------------------
+    aside right
+-----------------------------------------------------------------------------------------*/
+.aside_right {
+  grid-area: aside_right;
+  width: 100%;
+}
+
+.aside_right-pub {
+  width: 13.5rem;
+  margin: 1rem;
+}
+.aside_right-pub img {
+  float: left;
+  vertical-align: middle;
+}
+
+.aside_right-p-span {
+  color: gray;
+}
+
+.aside_right-hr {
+  margin: 1rem;
+}
+
+.aside_right-ul p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  margin: 1rem;
+}
+.aside_right-ul p:hover {
+  background-color: #dcdee5;
+}
+.aside_right-ul img {
+  vertical-align: middle;
+  width: 2.2rem;
+  border-radius: 5rem;
+}
+
+.aside_left ul, .aside_right-ul p {
+  border: white;
+  border-style: none;
+  border-radius: 2rem;
+}
+
+.body_deskop, .aside_left {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+.section_post, .section_salons, .section_watsup {
+  box-shadow: 2px 1px 2px #9c9b9b;
+}
+
+/*----------------------------------------------------------------------------------------
+   section
 -----------------------------------------------------------------------------------------*/
 .section {
   grid-area: section;
@@ -305,73 +417,6 @@ td:not([align]), th:not([align]) {
   background-color: #ebecf0;
   border-style: none;
   padding: 0.3rem;
-}
-
-/*----------------------------------------------------------------------------------------
-    aside left
------------------------------------------------------------------------------------------*/
-.aside_left {
-  grid-area: aside_left;
-  width: 100%;
-}
-.aside_left img {
-  vertical-align: middle;
-  border-radius: 5rem;
-}
-.aside_left ul {
-  margin: 1rem;
-}
-.aside_left ul:hover {
-  background-color: #dcdee5;
-}
-
-.aside_left-hr, .aside_right-hr {
-  border-style: outset;
-  margin: 0.5rem 1rem;
-}
-
-.aside_left-h3 {
-  margin: 1rem;
-  font-size: 1.1rem;
-}
-
-/*----------------------------------------------------------------------------------------
-    aside right
------------------------------------------------------------------------------------------*/
-.aside_right {
-  grid-area: aside_right;
-  width: 100%;
-}
-
-.aside_right-pub {
-  width: 13.5rem;
-  margin: 1rem;
-}
-.aside_right-pub img {
-  float: left;
-  vertical-align: middle;
-}
-
-.aside_right-p-span {
-  color: gray;
-}
-
-.aside_right-hr {
-  margin: 1rem;
-}
-
-.aside_right-ul p {
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-  margin: 1rem;
-}
-.aside_right-ul p:hover {
-  background-color: #dcdee5;
-}
-.aside_right-ul img {
-  vertical-align: middle;
-  width: 2.2rem;
-  border-radius: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

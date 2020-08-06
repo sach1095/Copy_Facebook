@@ -68,7 +68,7 @@
 
 .m_stories{
     grid-area: stories;
-    height: 525px;
+    height: 460px;
     margin-top: 25px;
     background-color: white;  
     h3, p{
@@ -79,3 +79,5 @@
         width: 23%;
     }
 }
+
+@import "../sass/m.post.scss"

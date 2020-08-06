@@ -2,7 +2,7 @@
 .m_post{
     grid-area: post;
     margin-top: 25px;
-    height: 1430px;
+    height: 100%;
     background-color: white;
 }
 
@@ -23,7 +23,6 @@
 .m_post-top-icon2{
     transform: rotate(-90deg); 
     width: 3rem; 
-    height: 5rem; 
     margin: 2rem;
 }
 .m_post-top-imgPost{
@@ -38,6 +37,9 @@
 .m_post-bot-span{
     position: absolute; 
     left: 2rem;
+    img{
+        vertical-align: middle;
+    }
 }
 .m_post-bot-a{
     position: absolute; 
@@ -59,9 +61,6 @@
 .m_post_container{
     width: 100%;
     font-size: 3rem;
-    justify-content: space-between;
-    img{
-        width: 3rem;
-    }
+    justify-content: space-between; 
 }
 
