@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/m.style.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/aside.css">
     <link rel="stylesheet" href="../css/section.css">
+   
+    <link rel="stylesheet" href="../css/m.style.css">
+    <link rel="stylesheet" href="../css/m.post.css">
+    
+    <link rel="stylesheet" href="../css/responsive.css">
+
     <title>Facebook</title>
 </head>
 <body>
@@ -292,7 +296,6 @@
 
     <!--  her start the mobile version -->
     <div class="body_tablette">
-
         <div class="m_body">
 
   
@@ -336,20 +339,20 @@
               <img
                 src="../asset/img_m/img_watsup/img1.jpg"
                 alt=""
-                style="border-radius: 50%;"
+                class="m_wastsup-img1"
+                
               />
               <input type="text" placeholder="Que voulez-vous dire ?" />
               <img
                 src="../asset/img_m/img_watsup/icon1.jpeg"
                 alt=""
-                style="margin-top: 15px;"
               />
             </section>
         
             <section class="m_stories">
         
-              <div class="container" style="justify-content: space-between;">
-                <h3>Stories</h3> <p style="color: gray;" >Votre archive</p>
+              <div class="container space_B" >
+                <h3>Stories</h3> <p style="color: gray;">Votre archive</p>
               </div>
         
               <div class="container">
@@ -379,18 +382,18 @@
              
               <div class="container m_post_container">
              
-                <div style="display: flex; margin-top: 2rem;">
+                <div class="m_post-top">
                 <img 
                   src="../asset/img_m/img_post/img1.jpg" 
                   alt=""
-                  style="width: 6rem; border-radius: 5rem; vertical-align: middle;"
+                  class="m_post-top-img1"
                 /> 
                 <p> 
                  Sacha Baranes 
                   <img 
                     src="../asset/img_m/img_post/icon1.png" 
-                    alt="" 
-                    style="transform: rotate(90deg); width: 1.7rem;"
+                    alt=""
+                    class="m_post-top-icon1"
                   /> Dragon Ball Super   
                   
                   <br> 
@@ -405,51 +408,48 @@
                   <img 
                     src="../asset/img_m/img_post/icon2.png" 
                     alt=""
-                    style="transform: rotate(-90deg); width: 3rem; height: 5rem; margin: 2rem;"  
+                    class="m_post-top-icon2"
                   />
               </div>
         
               <img 
                 src="../asset/img_m/img_post/imgPost.jpeg" 
                 alt=""
-                style="width: 100%; margin-top: 2rem;"
+                class="m_post-top-imgPost"
               />
         
-              <div class="container"  style="margin: 1rem; height: 45px;">
+              <div class="container m_post-bot">
         
-                <span style="position: absolute; left: 2rem;">
+                <span class="m_post-bot-span">
                   <img 
                 src="../asset/img_m/img_post/icon3.jpeg" 
                 alt=""
                 
                 /> 8
                 </span>  
-                <a 
-                style="position: absolute; right: 2rem; color: gray; text-decoration: none;"
-                href="" 
-                style="margin-left: 0rem;">
+                <a class="m_post-bot-a"
+                href=""
+                >
                   4 commentaires
                 </a>
                 
                 
               </div>
-              <hr style="margin: 1rem;">
+              <hr class="m_post-bot-hr">
         
-                <div class="container" style="color: gray;">
+                <div class="container">
         
-                    <div>
+                    <div class="m_post-bot-btn">
                       <img 
                       src="../asset/img_m/img_post/icon4.png" 
                       alt=""
-                      style="width: 3.3rem; vertical-align: middle;"
                       /> J'aime
                     </div>
         
-                    <div >
+                    <div class="m_post-bot-btn">
                       <img 
                       src="../asset/img_m/img_post/icon5.png" 
                       alt=""
-                      style="width: 3.3rem; vertical-align: middle;"
                       /> Commentaire
                     </div>
         
@@ -457,9 +457,7 @@
         
             </section>
           </div>
-
-    </div>
-</body>
-
+        </div>
+        </body>
 
 </html>

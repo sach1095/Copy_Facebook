@@ -57,9 +57,9 @@
     }
     .section_wastup_block{
         margin-top: 0.5rem;
-    img{
+        img{
         vertical-align: middle;
-    }
+        }
         &:hover {
             background-color: darken($color: $second, $amount: 5);
         }

@@ -1,78 +1,196 @@
-.body_tablette {
-  width: 100%;
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
 }
-.body_tablette .m_body {
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+td:not([align]), th:not([align]) {
+  text-align: left;
+}
+
+.m_body {
   display: grid;
   grid-row: repeat 4, 100%;
-  grid-template-areas: "m_header" "m_watsup" "m_stories" "m_post";
+  grid-template-areas: "header" "watsup" "stories" "post";
   background-color: #dadde1;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 2.2rem;
 }
-.body_tablette * {
+
+* {
   margin: 0;
   box-sizing: border-box;
 }
-.body_tablette .m_header {
+
+.m_header {
   display: flex;
-  grid-area: m_header;
   width: 100%;
   height: 120px;
   align-items: center;
   justify-content: center;
   background-color: #365c95;
 }
-.body_tablette .m_header img {
+.m_header img {
   width: 7%;
   margin: 0px 30px;
 }
-.body_tablette .container {
+
+.container {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
 }
-.body_tablette .m_watsup {
-  grid-area: m_watsup;
+
+.space_B {
+  justify-content: space-between;
+}
+
+.m_watsup {
+  grid-area: watsup;
   width: 100%;
   text-align: center;
   background-color: white;
 }
-.body_tablette .m_watsup img {
+.m_watsup img {
   width: 10%;
   vertical-align: middle;
 }
-.body_tablette .m_watsup input {
+.m_watsup input {
   width: 70%;
   height: 80px;
   margin: 25px;
   border-radius: 3rem;
   font-size: 2.2rem;
 }
-.body_tablette .m_stories {
-  grid-area: m_stories;
+
+.m_wastsup-img1 {
+  border-radius: 50%;
+}
+
+.m_stories {
+  grid-area: stories;
   height: 525px;
   margin-top: 25px;
   background-color: white;
 }
-.body_tablette .m_stories h3, .body_tablette .m_stories p {
+.m_stories h3, .m_stories p {
   margin: 22px;
   margin-bottom: 30px;
 }
-.body_tablette .m_stories img {
+.m_stories img {
   width: 23%;
 }
-.body_tablette .m_post {
-  grid-area: m_post;
+
+.m_post {
+  grid-area: post;
   margin-top: 25px;
   height: 1430px;
   background-color: white;
 }
-.body_tablette .m_post_container {
+
+.m_post-top {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.m_post-top-img1 {
+  width: 6rem;
+  border-radius: 5rem;
+  vertical-align: middle;
+}
+
+.m_post-top-icon1 {
+  transform: rotate(90deg);
+  width: 1.7rem;
+}
+
+.m_post-top-icon2 {
+  transform: rotate(-90deg);
+  width: 3rem;
+  height: 5rem;
+  margin: 2rem;
+}
+
+.m_post-top-imgPost {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.m_post-bot {
+  margin: 1rem;
+  height: 45px;
+}
+
+.m_post-bot-span {
+  position: absolute;
+  left: 2rem;
+}
+
+.m_post-bot-a {
+  position: absolute;
+  right: 2rem;
+  color: gray;
+  text-decoration: none;
+  margin-left: 0rem;
+}
+
+.m_post-bot-hr {
+  margin: 1rem;
+}
+
+.m_post-bot-btn {
+  color: gray;
+}
+.m_post-bot-btn img {
+  width: 3.3rem;
+  vertical-align: middle;
+}
+
+.m_post_container {
   width: 100%;
   font-size: 3rem;
   justify-content: space-between;
 }
-.body_tablette .m_post_container img {
+.m_post_container img {
   width: 3rem;
 }
 
