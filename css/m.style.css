@@ -1,0 +1,79 @@
+.body_tablette {
+  width: 100%;
+}
+.body_tablette .m_body {
+  display: grid;
+  grid-row: repeat 4, 100%;
+  grid-template-areas: "m_header" "m_watsup" "m_stories" "m_post";
+  background-color: #dadde1;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2.2rem;
+}
+.body_tablette * {
+  margin: 0;
+  box-sizing: border-box;
+}
+.body_tablette .m_header {
+  display: flex;
+  grid-area: m_header;
+  width: 100%;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  background-color: #365c95;
+}
+.body_tablette .m_header img {
+  width: 7%;
+  margin: 0px 30px;
+}
+.body_tablette .container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.body_tablette .m_watsup {
+  grid-area: m_watsup;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+.body_tablette .m_watsup img {
+  width: 10%;
+  vertical-align: middle;
+}
+.body_tablette .m_watsup input {
+  width: 70%;
+  height: 80px;
+  margin: 25px;
+  border-radius: 3rem;
+  font-size: 2.2rem;
+}
+.body_tablette .m_stories {
+  grid-area: m_stories;
+  height: 525px;
+  margin-top: 25px;
+  background-color: white;
+}
+.body_tablette .m_stories h3, .body_tablette .m_stories p {
+  margin: 22px;
+  margin-bottom: 30px;
+}
+.body_tablette .m_stories img {
+  width: 23%;
+}
+.body_tablette .m_post {
+  grid-area: m_post;
+  margin-top: 25px;
+  height: 1430px;
+  background-color: white;
+}
+.body_tablette .m_post_container {
+  width: 100%;
+  font-size: 3rem;
+  justify-content: space-between;
+}
+.body_tablette .m_post_container img {
+  width: 3rem;
+}
+
+/*# sourceMappingURL=m.style.css.map */

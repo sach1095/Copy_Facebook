@@ -47,14 +47,13 @@ td:not([align]), th:not([align]) {
   text-align: left;
 }
 
-/* 1330 ca casse */
 .aside_right-ul p, .aside_left ul {
   border: white;
   border-style: none;
   border-radius: 2rem;
 }
 
-.aside_left, body {
+.aside_left, .body_deskop {
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
 }
@@ -66,7 +65,7 @@ td:not([align]), th:not([align]) {
 /*----------------------------------------------------------------------------------------
     Body 
 ----------------------------------------------------------------------------------------*/
-body {
+.body_deskop {
   background-color: #ebecf0;
   display: grid;
   grid-template-columns: 25% 50% 25%;
@@ -259,7 +258,7 @@ body {
   margin-left: 6.5rem;
   width: 75%;
   background-color: white;
-  height: 815px;
+  height: 100%;
 }
 .section_post a {
   margin-right: 0.7rem;

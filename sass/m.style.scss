@@ -1,0 +1,94 @@
+
+.body_tablette{
+    
+    width: 100%;
+
+    .m_body{
+        display: grid;
+        grid-row: repeat (4, 100%);
+        grid-template-areas: "m_header"
+        "m_watsup"
+        "m_stories"
+        "m_post";
+        background-color: rgb(218, 221, 225);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2.2rem;
+    }
+
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .m_header {
+        display: flex;
+        grid-area: m_header;
+        width: 100%;
+        height: 120px;
+        align-items: center;
+        justify-content: center;
+        background-color: #365c95;
+        img{
+            width: 7%;
+            margin: 0px 30px;
+        }
+        
+    }
+    
+    .container {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    
+
+    .m_watsup{
+        grid-area: m_watsup;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        img{
+            width: 10%;
+            vertical-align: middle;
+        }
+        input{
+            width: 70%;
+            height: 80px;
+            margin: 25px;
+            border-radius: 3rem;
+            font-size: 2.2rem;
+        }
+    }
+
+    .m_stories{
+        grid-area: m_stories;
+        height: 525px;
+        margin-top: 25px;
+        background-color: white;  
+        h3, p{
+            margin: 22px;
+            margin-bottom: 30px;
+        }
+        img{
+            width: 23%;
+        }
+    }
+
+
+    .m_post{
+        grid-area: m_post;
+        margin-top: 25px;
+        height: 1430px;
+        background-color: white;
+    }
+
+    .m_post_container{
+        width: 100%;
+        font-size: 3rem;
+        justify-content: space-between;
+        img{
+            width: 3rem;
+        }
+    }
+}

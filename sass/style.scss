@@ -1,0 +1,361 @@
+@import "../libs/reset.scss";
+
+    $primary: rgb(235, 236, 240);
+    $second: rgb(240, 241, 245);
+
+    %border{
+        border: rgb(255, 255, 255);
+        border-style: none;
+        border-radius: 2rem;
+    }
+
+    %police{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+    }
+
+    %shadow{
+        box-shadow: 2px 1px 2px rgb(156, 155, 155);
+    }
+
+    /*----------------------------------------------------------------------------------------
+        Body 
+    ----------------------------------------------------------------------------------------*/
+
+    .body_deskop{
+        @extend %police;
+        background-color: $primary;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-areas: "header header header"
+                            "aside_left section aside_right"
+                            "aside_left section aside_right";
+        
+    }
+
+
+    /*----------------------------------------------------------------------------------------
+        header
+    -----------------------------------------------------------------------------------------*/
+
+    .header{
+        grid-area: header;
+        background-color: white;
+        width: 100%;
+        height: 3.7rem;
+        justify-content: space-between;
+        img{
+            vertical-align: middle;
+            border-radius: 5rem;
+        }
+    }
+    .container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header_left{
+        display: flex;
+        justify-content: flex-start;
+        width: 25%;
+    }
+
+
+    .header_left-search{
+        background-color: $second;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 40px;
+        margin-top: 0.6rem;
+        border-radius: 90px;
+        input{
+            border-style: none;
+            background-color: $second;
+            width: 15rem;
+            font-size: 1rem;
+        }
+
+        img{
+            margin-left: 0.7rem;
+            vertical-align: middle;
+            border-radius: 5rem;
+        }
+    }
+
+    .header_middle{
+        display: flex;
+        justify-content: space-evenly;
+        width: 35%;
+        img{
+            margin: 0.4rem 2rem;
+        }
+        
+    }
+
+    .header_middle-icon{
+        display : flex;
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
+        img{
+            width: 30%;
+            height: 70%;
+        }
+    &:hover{
+        background-color: darken($color: white, $amount: 5);
+    }
+    }
+
+    .header_right{
+        display: flex;
+        width: 20%;
+        height: 42px;
+        margin-top: 0.5rem;
+    }
+
+
+    .header_right-icon{
+        padding: 0.5rem;
+        border-radius: 5rem;    
+        background-color: $second;
+        &:hover {
+            background-color: darken($color: $second, $amount: 5);
+        }
+    }
+
+    /*----------------------------------------------------------------------------------------
+        section
+    -----------------------------------------------------------------------------------------*/
+
+    .section{
+        grid-area: section;
+        display: box;
+    }
+
+    .story{
+        grid-area: story;
+        width: 86%;
+        display: flex;
+        margin-top: 1rem;
+        img{
+            border-radius: 1rem;
+            margin-left: 4rem;
+        }
+    }
+
+    /*---------------------------------------------------*/
+
+    .section_watsup{
+        grid-area: watsup;
+        margin-top: 0.8rem;
+        background-color: white;
+        margin-left: 6.5rem;
+        width: 75%;
+        height: 100px;
+        border-radius: 0.5rem;
+        @extend %shadow;
+    }
+    .section_watsup_search{
+    margin: 0.5rem 0.5rem;
+    margin-top: 1rem;
+        img{
+            border-radius: 5rem;
+            vertical-align: middle;
+        }
+        input{
+            vertical-align: middle;
+            border-style: none;
+            border-radius: 1.5rem;
+            background-color: $second;
+            width: 85%;
+            height: 35px;
+            font-size: 1rem;
+        }
+    
+    }
+    .section_wastup_hr{
+        vertical-align: middle;   
+        width: 93%;
+        border-style: outset;
+    }
+    .section_wastup_block{
+        margin-top: 0.5rem;
+    img{
+        vertical-align: middle;
+    }
+        &:hover {
+            background-color: darken($color: $second, $amount: 5);
+        }
+    }
+
+    /*---------------------------------------------------*/
+
+    .section_salons{
+        grid-area: salons;
+        background-color: white;
+        margin-left: 6.5rem;
+        margin-top: 0.8rem;
+        width: 75%;
+        border-radius: 0.5rem;
+        height: 75px;
+        @extend %shadow;
+
+        img{
+            float: left;
+            vertical-align: super;
+            margin-right: 0.2rem;
+        }
+        a{
+            margin-right: 0.7rem;
+            color: blue;
+            text-decoration: none;
+        }
+    }
+
+    .section_salons-bottom{
+        display: flex; 
+        img{
+            margin: 0.2rem;
+        }
+    }
+    /*---------------------------------------------------*/
+
+    .section_post{
+        grid-area: post;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        margin-left: 6.5rem;
+        width: 75%;    
+        background-color: white;
+        height: 100%;
+        @extend %shadow;
+        a{
+            margin-right: 0.7rem;
+            color: gray;
+            text-decoration: none;
+        }
+        hr{
+            width: 93%;
+            margin-left: 1.5rem;
+            border-style: outset;
+        }
+    }
+
+
+    .post_container{
+        width: 100%;
+        font-size: 1rem;
+        justify-content: space-between;
+        img{
+            width: 1rem;
+        }
+    }
+    .post_btn{
+        padding: 0.2rem;
+        img{
+            width: 1.4rem;
+            vertical-align: middle;
+        }
+
+        &:hover{
+            background-color: darken($color: $second, $amount: 5);
+        }
+    }
+
+    .post_bottom{
+        display: line;
+        background-color: $primary;
+        margin-left: 3rem;
+        border-radius: 1.5rem;
+        padding: 0.5rem;
+        img{
+            float: right;
+        }
+        input{
+            background-color: $primary;
+            border-style: none;
+            padding: 0.3rem;
+        }
+    }
+
+
+    /*----------------------------------------------------------------------------------------
+        aside left
+    -----------------------------------------------------------------------------------------*/
+    .aside_left{
+        @extend %police;
+        grid-area: aside_left;
+        width: 100%;
+        img{
+        vertical-align: middle;
+        border-radius: 5rem;
+        }
+        ul{
+        @extend %border;
+        margin: 1rem;
+        &:hover{
+            background-color: darken($color: $primary, $amount: 5);
+        }
+        }
+    }
+
+
+    .aside_left-hr{
+        border-style: outset;
+        margin: 0.5rem 1rem;
+    }
+
+    .aside_left-h3{
+        margin: 1rem;
+        font-size: 1.1rem;
+    }
+
+
+    /*----------------------------------------------------------------------------------------
+        aside right
+    -----------------------------------------------------------------------------------------*/
+
+    .aside_right{
+        grid-area: aside_right;
+        width: 100%;
+    }
+
+    .aside_right-pub{
+        width: 13.5rem;
+        margin: 1rem;
+        img{
+            float:left;
+            vertical-align: middle;
+        }
+        
+    }
+
+    .aside_right-p-span{
+        color: gray;
+    }
+    .aside_right-hr{
+        @extend .aside_left-hr;
+        margin: 1rem;
+    }
+
+
+
+    .aside_right-ul{
+        p{
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            @extend %border;
+        margin: 1rem;
+        &:hover{
+            background-color: darken($color: $primary, $amount: 5);
+        }
+        }
+        img{
+            vertical-align: middle;
+            width: 2.2rem;
+            border-radius: 5rem;    
+
+        }
+    }
+
